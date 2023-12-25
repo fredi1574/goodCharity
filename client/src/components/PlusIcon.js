@@ -1,10 +1,14 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
 
-import "../style/PlusIcon.css";
+import "./style/PlusIcon.css";
 
 function PlusIcon() {
-  return <FaPlus className="plus-icon" />;
+  const handleClick = () => {
+    console.log("clicked");
+  };
+
+  return <FaPlus className="plus-icon" onClick={handleClick} />;
 }
 
 export default PlusIcon;

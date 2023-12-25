@@ -1,0 +1,27 @@
+:root {
+  --primary-color: #60baff;
+  --secondary-color: #226d5c;
+
+  --hover-color: #88cbff;
+  --hoverBackground-color: #184b3f;
+}
+
+.plus-icon {
+  /* Fix the position of the icon */
+  position: fixed;
+  bottom: 20px;
+  right: 2svw;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  font-size: 50px;
+  padding: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.plus-icon:hover {
+  cursor: pointer;
+  color: var(--hover-color);
+  background-color: var(--hoverBackground-color);
+}
