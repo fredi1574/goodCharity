@@ -1,5 +1,12 @@
-.gradient {
-  background: linear-gradient(135deg, #7cc0f3 0%, #11a78b 110%);
+.app {
   height: 100svh;
-  width: 100svw;
+  overflow-y: scroll;
+  padding-right: 20px;
+  background: linear-gradient(135deg, #60baff 0%, #11a78b 110%);
+}
+
+.itemList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8svh 0 0 0;
 }
