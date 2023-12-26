@@ -7,7 +7,6 @@
 }
 
 .plus-icon {
-  /* Fix the position of the icon */
   position: fixed;
   bottom: 20px;
   right: 2svw;
@@ -15,8 +14,8 @@
   background-color: var(--secondary-color);
   border-radius: 50%;
   font-size: 50px;
-  padding: 10px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 

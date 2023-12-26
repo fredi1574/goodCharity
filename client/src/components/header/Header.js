@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./style/Header.css";
+import "./Header.css";
 import { MdSunny, MdDarkMode } from "react-icons/md";
 
 function Header() {

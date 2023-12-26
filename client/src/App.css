@@ -1,3 +1,7 @@
+* {
+  user-select: none;
+}
+
 .app {
   height: 100svh;
   overflow-y: scroll;
@@ -8,5 +12,5 @@
 .itemList {
   display: flex;
   flex-wrap: wrap;
-  margin: 8svh 0 0 0;
+  margin: 7svh 0 0 0;
 }
