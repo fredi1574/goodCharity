@@ -1,0 +1,86 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40svw;
+  height: 60svh;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: #35a78c;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+form h1 {
+  text-align: center;
+  color: #60baff;
+}
+
+form input {
+  outline: none;
+  width: 25svw;
+  align-self: center;
+  margin: 1.5svh;
+  padding: 1svh;
+  border-radius: 5px;
+  border: none;
+}
+
+form input,
+form input::placeholder {
+  color: #45d6b4;
+  background-color: #226d5c;
+}
+
+form input:focus {
+  background-color: #a7d9ff;
+  color: #34a7ff;
+  transition: 0.2s ease-in-out;
+}
+
+form input:focus::placeholder {
+  background-color: #a7d9ff;
+  color: #34a7ff;
+  transition: 0.2s ease-in-out;
+}
+
+form .signUpButton {
+  width: 10svw;
+  align-self: center;
+  margin-top: 1svh;
+  padding: 1svh;
+  border-radius: 5px;
+  border: none;
+  color: #006ec2;
+  background-color: #60baff;
+  box-shadow: 1px 2px 10px #226d5c60;
+  transition: 0.3s ease-in-out;
+}
+
+form .signUpButton:hover {
+  cursor: pointer;
+  background-color: #88cbff;
+}
+
+form .signUpButton:active {
+  transform: scale(0.95);
+  background-color: #a8d9ff;
+  transition: 0.1s ease-in-out;
+}
+
+form h5 {
+  text-align: center;
+  color: #226d5c;
+}
+
+form .googleButton {
+  width: 10svw;
+  height: 3svh;
+  background-color: #ff4c4cab;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5svh;
+  align-self: center;
+}
+
+form .googleBtn:active {
+  transform: scale(0.95);
+}
