@@ -45,7 +45,6 @@
 
 .theme:hover {
   cursor: pointer;
-  animation: changeColors;
   color: var(--hover-color);
   background-color: var(--hoverBackground-color);
 }
