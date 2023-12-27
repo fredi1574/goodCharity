@@ -4,9 +4,12 @@
 
 .app {
   height: 100svh;
-  overflow-y: scroll;
-  padding-right: 20px;
+  overflow-y: auto;
   background: linear-gradient(135deg, #60baff 0%, #11a78b 110%);
+}
+
+.body {
+  margin-top: 6svh;
 }
 
 .itemList {

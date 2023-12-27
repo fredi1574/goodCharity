@@ -2,8 +2,8 @@ import "./App.css";
 
 import Header from "./components/header/Header";
 import PlusIcon from "./components/plusIcon/PlusIcon";
-
 import Item from "./components/itemCard/Item";
+import SignUp from "./components/signUp/SignUp";
 
 function App() {
   //For testing purposes only.
@@ -16,7 +16,10 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <div className="itemList">{items}</div>
+      <div className="body">
+        <SignUp />
+        {/* <div className="itemList">{items}</div> */}
+      </div>
       <PlusIcon />
     </div>
   );
