@@ -1,16 +1,26 @@
+require("dotenv").config();
 const express = require("express");
-const { connectToDB, getDB } = require("./db");
+const mongoose = require("mongoose");
 
-// Initialize the app
+const itemsRoutes = require("./routes/items");
+
+// Initialize an express app
 const app = express();
 
-// Connect to Database
-let db;
+// middleware to enable JSON parsing
+app.use(express.json());
 
-connectToDB((error) => {
-  if (!error) {
-    const port = process.env.PORT || 5000;
-    app.listen(port, () => console.log(`Server listening on port ${port}`));
-    db = getDB();
-  }
-});
+app.use("/api/items", itemsRoutes);
+
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    app.listen(process.env.PORT, () =>
+      console.log(
+        `connected to database and listening on port ${process.env.PORT}`
+      )
+    );
+  })
+  .catch((error) => {
+    console.error(error);
+  });
