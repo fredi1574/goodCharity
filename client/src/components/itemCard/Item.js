@@ -3,10 +3,8 @@ import React from "react";
 import "./Item.css";
 import { FaPhoneAlt } from "react-icons/fa";
 
-function Item() {
-  const title = "Title";
-  const description = "Description";
-  const phone = "+972-555-555-555";
+function Item({ item }) {
+  const { title, description, phone } = item;
 
   return (
     <div className="card">
