@@ -15,7 +15,7 @@ function SignUp() {
   };
 
   return (
-    <form className="SignUp">
+    <form className="SignUp" onSubmit={handleSignUp}>
       <h1>SignUp</h1>
       <input
         type="username"
@@ -47,9 +47,7 @@ function SignUp() {
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
       />
-      <button className="signUpButton" onClick={handleSignUp}>
-        Signup
-      </button>
+      <button className="signUpButton">Signup</button>
       {/* todo: add login link */}
       <h5>Already have an account? Login</h5>
       <button className="googleButton">Login with Google</button>

@@ -74,6 +74,7 @@ form h5 {
 form .googleButton {
   width: 10svw;
   height: 3svh;
+  color: #fff;
   background-color: #ff4c4cab;
   border: none;
   border-radius: 5px;
@@ -81,6 +82,10 @@ form .googleButton {
   align-self: center;
 }
 
-form .googleBtn:active {
+form .googleButton:hover {
+  background-color: #ff1010ab;
+}
+
+form .googleButton:active {
   transform: scale(0.95);
 }
