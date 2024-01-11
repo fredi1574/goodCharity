@@ -27,9 +27,30 @@ const getItem = async (req, res) => {
   res.status(200).json(item);
 };
 
-// POST one item
+// POST (create) one item
 const createItem = async (req, res) => {
   const { title, description, phone, email } = req.body;
+
+  let emptyFields = [];
+
+  if (!title) {
+    emptyFields.push("title");
+  }
+  if (!description) {
+    emptyFields.push("description");
+  }
+  if (!phone) {
+    emptyFields.push("phone");
+  }
+  if (!email) {
+    emptyFields.push("email");
+  }
+
+  if (emptyFields.length > 0) {
+    return res
+      .status(400)
+      .json({ error: "Please fill in all the fields", emptyFields });
+  }
 
   try {
     const item = await Item.create(req.body);

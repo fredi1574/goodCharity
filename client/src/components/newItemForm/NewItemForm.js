@@ -9,6 +9,7 @@ function NewItemForm() {
   const [description, setDescription] = useState("");
   const [phone, setPhone] = useState("");
 
+  const [emptyFields, setEmptyFields] = useState([]);
   const [error, setError] = useState(null);
   //   const [email, setEmail] = useState("");
 
@@ -30,12 +31,14 @@ function NewItemForm() {
     // Check whether the response status is 200-299
     if (!response.ok) {
       setError(newItem.error);
+      setEmptyFields(newItem.emptyFields);
     }
     if (response.ok) {
       setError(null);
       setTitle("");
       setDescription("");
       setPhone("");
+      setEmptyFields([]);
       dispatch({ type: "CREATE_ITEM", payload: newItem });
     }
   };
@@ -48,21 +51,24 @@ function NewItemForm() {
         placeholder="Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+        className={emptyFields.includes("title") ? "error" : ""}
       />
       <input
         type="text"
         placeholder="Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
+        className={emptyFields.includes("description") ? "error" : ""}
       />
       <input
         type="text"
         placeholder="Phone"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
+        className={emptyFields.includes("phone") ? "error" : ""}
       />
       <button type="submit">Add item</button>
-      {error && <div className="error">{error}</div>}
+      {error && <div className="errorBubble">{error}</div>}
     </form>
   );
 }
