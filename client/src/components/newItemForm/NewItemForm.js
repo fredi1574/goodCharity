@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useItemsContext } from "../../hooks/useItemsContext";
 
 import "./NewItemForm.css";
 
 function NewItemForm() {
+  const { dispatch } = useItemsContext();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [phone, setPhone] = useState("");
@@ -23,17 +25,18 @@ function NewItemForm() {
         "Content-Type": "application/json",
       },
     });
-    const data = await response.json();
+    const newItem = await response.json();
 
     // Check whether the response status is 200-299
     if (!response.ok) {
-      setError(data.error);
+      setError(newItem.error);
     }
     if (response.ok) {
       setError(null);
       setTitle("");
       setDescription("");
       setPhone("");
+      dispatch({ type: "CREATE_ITEM", payload: newItem });
     }
   };
 
