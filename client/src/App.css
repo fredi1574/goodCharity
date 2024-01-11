@@ -8,10 +8,6 @@
   background: linear-gradient(135deg, #60baff 0%, #11a78b 110%);
 }
 
-.body {
-  margin-top: 6svh;
-}
-
 .itemList {
   display: flex;
   flex-wrap: wrap;
