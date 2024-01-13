@@ -29,7 +29,7 @@ const getItem = async (req, res) => {
 
 // POST (create) one item
 const createItem = async (req, res) => {
-  const { title, description, phone, email } = req.body;
+  const { title, description, email } = req.body;
 
   let emptyFields = [];
 
@@ -38,9 +38,6 @@ const createItem = async (req, res) => {
   }
   if (!description) {
     emptyFields.push("description");
-  }
-  if (!phone) {
-    emptyFields.push("phone");
   }
   if (!email) {
     emptyFields.push("email");

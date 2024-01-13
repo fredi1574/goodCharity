@@ -3,26 +3,26 @@ import { useState } from "react";
 import "./SignUp.css";
 
 function SignUp() {
-  const [userName, setUserName] = useState("");
+  // const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [secondPassword, setSecondPassword] = useState("");
-  const [phone, setPhone] = useState("");
 
   const handleSignUp = async (event) => {
     event.preventDefault();
-    console.log(userName, email, password, phone);
+    // console.log(userName, email, password);
+    console.log(email, password);
   };
 
   return (
     <form className="SignUp" onSubmit={handleSignUp}>
       <h1>SignUp</h1>
-      <input
+      {/* <input
         type="username"
         placeholder="Username"
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
-      />
+      /> */}
       <input
         type="email"
         placeholder="Email"
@@ -40,12 +40,6 @@ function SignUp() {
         placeholder="Repeat password"
         value={secondPassword}
         onChange={(e) => setSecondPassword(e.target.value)}
-      />
-      <input
-        type="tel"
-        placeholder="Phone"
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
       />
       <button className="signUpButton">Signup</button>
       {/* todo: add login link */}
